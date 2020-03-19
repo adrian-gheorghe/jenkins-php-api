@@ -1,7 +1,7 @@
 {
-  "name": "productsupcom/jenkins-php-api",
+  "name": "adrian-gheorghe/jenkins-php-api",
   "description": "Library to control Jenkins via PHP through JSON api",
-  "homepage": "https://github.com/productsupcom/jenkins-php-api",
+  "homepage": "https://github.com/chbiel/jenkins-php-api",
   "license": "proprietary",
   "authors": [
     {
