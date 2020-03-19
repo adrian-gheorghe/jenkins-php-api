@@ -49,7 +49,7 @@ class Job extends AbstractItem
      */
     protected function getUrl()
     {
-        return sprintf('job/%s/api/json', rawurlencode($this->_jobName));
+        return sprintf('job/%s/api/json', ($this->_jobName));
     }
 
     /**
@@ -143,9 +143,9 @@ class Job extends AbstractItem
     public function launch($parameters = array())
     {
         if (empty($parameters)) {
-            return $this->_jenkins->post(sprintf('job/%s/build', rawurlencode($this->_jobName)));
+            return $this->_jenkins->post(sprintf('job/%s/build', ($this->_jobName)));
         } else {
-            return $this->_jenkins->post(sprintf('job/%s/buildWithParameters', rawurlencode($this->_jobName)), $parameters);
+            return $this->_jenkins->post(sprintf('job/%s/buildWithParameters', ($this->_jobName)), $parameters);
         }
     }
 
