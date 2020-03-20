@@ -73,7 +73,7 @@ class Job extends AbstractItem
      */
     public function getBuild($buildId)
     {
-        return $this->_jenkins->getBuild($this->getName(), $buildId);
+        return $this->_jenkins->getBuild($this->_jobName, $buildId);
     }
 
     /**
