@@ -109,7 +109,7 @@ class Job extends AbstractItem
             return null;
         }
 
-        return $this->_jenkins->getBuild($this->getName(), $this->_data->lastSuccessfulBuild->number);
+        return $this->_jenkins->getBuild($this->_jobName, $this->_data->lastSuccessfulBuild->number);
     }
 
     /**
@@ -120,7 +120,7 @@ class Job extends AbstractItem
         if (null === $this->_data->lastBuild) {
             return null;
         }
-        return $this->_jenkins->getBuild($this->getName(), $this->_data->lastBuild->number);
+        return $this->_jenkins->getBuild($this->_jobName, $this->_data->lastBuild->number);
     }
 
     /**
